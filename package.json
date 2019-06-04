@@ -1,0 +1,26 @@
+{
+  "name": "lifesaver",
+  "version": "1.0.0",
+  "description": "Health App",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackathoneazy/Lifesaver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hackathoneazy/Lifesaver/issues"
+  },
+  "homepage": "https://github.com/hackathoneazy/Lifesaver#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.12",
+    "morgan": "^1.9.1"
+  }
+}
