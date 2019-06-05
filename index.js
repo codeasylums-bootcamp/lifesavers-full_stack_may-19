@@ -13,7 +13,7 @@ app.use(parser.json());
 app.use(parser.urlencoded({extended:true}));
 
 
-mongoose.connect("mongodb+srv://Salman:qwerty123@victorcluster-6cqju.mongodb.net/test?retryWrites=true",function(err){
+mongoose.connect("mongodb+srv://Shivam:9691@cluster0-ezk1q.mongodb.net/test?retryWrites=true",function(err){
     if(err)
     {
         console.log(err);

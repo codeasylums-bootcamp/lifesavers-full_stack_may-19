@@ -15,7 +15,21 @@ router.get('/',function(req,res){
         res.json(docData).status(200)
     })
 });
-   
+router.get('/password',function(req,res){
+    // res.send("Doctor's Home").status(200);
+    doctorModel.find(req.body.email)
+    .exec()
+    .then(docData=>{
+        bcrypt.compare(password,req.body.password , function(err, res) {
+            if(res) {
+                res.send("Password Match").status(201);
+            } else {
+             res.send("Password Incorrect").status(400);
+            } 
+          });
+        res.json(docData).status(200)
+    })
+});
 
 router.post('/',function(req,res){
     const newData= new doctorModel({
