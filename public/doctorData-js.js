@@ -1,5 +1,5 @@
 function addDoc(){
-    const name = document.getElementById("name").value) ;
+    const name = document.getElementById("name").value ;
     const city = document.getElementById("city").value ;
     const college = document.getElementById("college").value ;
     const age = document.getElementById("age").value ;
@@ -23,12 +23,14 @@ function addDoc(){
           experience : experience ,
           speciality : speciality ,
           clinic : clinic ,
-          licenceno : licenceno ,
+          medical_license_number : licenceno ,
           description : description ,
           contact : contact ,
           email : email ,
           password : password 
-      })
+      }, {headers: {
+        'Content-Type': 'application/json'
+    }})
       .then(function (response) {
         console.log(response) ;
       })

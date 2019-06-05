@@ -9,17 +9,38 @@
     <title>Doctor Dashboard</title>
     
     <style>
-        .partition{
-            width: 40% ;
-            margin-left: 50px ;
-            margin-bottom: 50px ;
-            height: 600px ;
-            float: left ;
-            background-color: rgba(0, 255, 213, 0.212) ;
-        }
-        .profile{
-            padding-left : 5px ;
-        }
+        * {
+        box-sizing: border-box;
+      }
+
+      .card{
+        width: 80%; 
+        background-color: antiquewhite
+      }
+      
+      
+      .column {
+        float: left;
+        width: 50%;
+        
+        
+        height: 640px; 
+      }
+      
+      
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      table {
+          border-collapse: collapse;
+          width: 60% ;
+      }
+
+      table, td, th {
+        border: 1px solid black;
     </style>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
@@ -43,8 +64,14 @@
         </div>
     </nav><br><br>
 
-    <div class = "partition profile">
-          <h2>hello Doctor</h2>
+    <div class="row">
+
+      <div class="column" style="background-color: #bbb;">
+ 
+        <h1 style="margin-left: 10px; color: indigo" > My Profile </h1> <br>
+          <div class="card"> 
+          <div style="margin-left: 10px; font-family: Arial, Helvetica, sans-serif" >
+          <h2 style="margin-top: 20px ">hello Doctor</h2>
           <h3 id = "name"> Name : </h3>
           <h4 id = "gender"> Gender : </h4>
           <h4 id = "degree"> Degree : </h4>
@@ -53,9 +80,29 @@
           <h4 id = "Medicalno"> Medical License Number : </h4>
           <h4 id = "speciality"> Speciality : </h4>
           <h4 id ="experience"> Experience : </h4>
+        </div>
+       </div>
+    </div> 
+
+    <div class="column" style="background-color:#bbb;">
+    <h2>Your Appointment Requests</h2>
+
+    <table>
+        <tr>
+          <th>Patient Name</th>
+          <th>City</th>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Lois</td>
+          <td></td>
+        </tr>
+      </table>
+   
     </div>
-    <div class = "partition">
-          <h1>boy</h1>
     </div>
 
     <script src="doctordashboard-js.js"></script>

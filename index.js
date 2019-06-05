@@ -25,7 +25,7 @@ mongoose.connect("mongodb+srv://Salman:qwerty123@victorcluster-6cqju.mongodb.net
 
 app.use('*',function(req,res,next){
     res.setHeader('Access-Control-Allow-Origin','*');
-    res.send("Reset").status(200);
+    res.setHeader('Access-Control-Allow-Headers', '*');
     next();
 });
 
