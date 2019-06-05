@@ -55,13 +55,19 @@ router.post('/',function(req,res){
     });
   
     
-            newData.save(function(err){
-                if(err)
-                res.send(err).status(400);
-                else
-                res.send("Data Saved").status(201);
-            });
-            
+    doctorModel.find({email:req.body.email})
+    .exec()
+    .then(users =>{
+        if(users.length > 0){
+            res.send("Account already exists").status(400);
+        }
+        else
+        {
+            newDoctor.save();
+            res.send("Account Created").status(201);
+
+        }
+    })
         //Updating the email of Doctor with ID , note the path - do it likewise 
 router.put('/:doctorID/update/email',function(req,res){
     const id = req.params.doctorID;
